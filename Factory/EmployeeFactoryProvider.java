@@ -11,7 +11,7 @@ public class EmployeeFactoryProvider {
             case Restaurantcashier -> new RestaurantCashierFactory();
             case SnackBarcashier -> new SnackBarCashierFactory();
             case EventManager -> new EventManagerFactory();
-            default -> new GenericEmployeeFactory();
+            default -> new Employee();
         };
     }
 }
