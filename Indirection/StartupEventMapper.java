@@ -1,9 +1,10 @@
 package com.example.Backend.Mapper;
 
+import org.springframework.stereotype.Component;
+
 import com.example.Backend.DTO.StartupEventDTO;
 import com.example.Backend.Entity.Employee;
 import com.example.Backend.Entity.StartupEvent;
-import org.springframework.stereotype.Component;
 
 @Component
 public class StartupEventMapper {
@@ -14,7 +15,6 @@ public class StartupEventMapper {
         
         if (event.getEmployee() != null) {
             employeeId = event.getEmployee().getId();
-            // Assuming Employee has firstName and lastName fields
             employeeFullName = event.getEmployee().getFirstName() + " " + event.getEmployee().getLastName();
         }
 

@@ -37,7 +37,7 @@ public class StartupEventDTO {
         this.employeeFullName = employeeFullName;
     }
 
-    // Getters and Setters
+
     public int getEventId() {
         return eventId;
     }
