@@ -1,13 +1,9 @@
-package strategy;
+package strateg_polymorphism;
 
 import com.google.firebase.messaging.*;
 
 public class FirebaseNotificationStrategy implements NotificationStrategy {
     private final FirebaseMessaging firebaseMessaging;
-
-    public FirebaseNotificationStrategy(FirebaseMessaging firebaseMessaging) {
-        this.firebaseMessaging = firebaseMessaging;
-    }
 
     @Override
     public void send(String title, String body, String token) {
