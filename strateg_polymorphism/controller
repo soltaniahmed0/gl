@@ -1,4 +1,4 @@
-// Appliquer la stratégie Email
+
 notificationService.setStrategy(new FirebaseNotificationStrategy());
 
 // Envoyer la notification
