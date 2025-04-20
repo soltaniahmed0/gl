@@ -1,5 +1,5 @@
-package strategy;
+package strateg_polymorphism;
 
 public interface NotificationStrategy {
-    void send(String title, String body, String target) throws Exception;
+    void send(String title, String body, String target);
 }
