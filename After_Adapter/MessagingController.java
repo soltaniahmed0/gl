@@ -1,4 +1,4 @@
-package com.example.Backend.Controller;
+package After_Adapter;
 
 import java.util.List;
 
@@ -6,10 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import com.example.Backend.Adapter.MessageDataAdapter; // adapter
-import com.example.Backend.Adapter.MessagingChannelAdapter; // adapter
 import com.example.Backend.Entity.*;
-import com.example.Backend.Services.MessagingService;
-import com.example.Backend.Services.NotificationService;
+
+import After_Adapter.Adapter.MessagingChannelAdapter;
+import Factory.Employee;
+import strateg_polymorphism.NotificationService;
 
 
 @RequestMapping("/Messaging")

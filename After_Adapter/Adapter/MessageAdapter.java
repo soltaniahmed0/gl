@@ -1,9 +1,10 @@
-package com.example.Backend.Adapter;
+package After_Adapter.Adapter;
 
 import com.example.Backend.DTO.MessageDataDTO;
 import com.example.Backend.Entity.MessageData;
 import com.example.Backend.Entity.Messaging_chanel;
-import com.example.Backend.Services.MessagingService;
+
+import After_Adapter.MessagingService;
 
 public class MessageAdapter {
 

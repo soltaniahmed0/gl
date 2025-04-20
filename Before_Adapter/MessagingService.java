@@ -10,7 +10,8 @@ import org.springframework.stereotype.Service;
 import com.example.Backend.Entity.*;
 import com.example.Backend.Repository.MessagingChannelRepository;
 import com.example.Backend.Repository.MessagingDataRepository;
-import com.example.Backend.Adapter.MessagingChannelAdapter; // adapter
+
+import Factory.Employee;
 
 @Service
 public class MessagingService {
@@ -21,12 +22,11 @@ public class MessagingService {
 
     public List<Messaging_chanelDTO> getuserMessagingChannels(Long id) {
         List<Messaging_chanelDTO> res = new ArrayList<>();
+         messagingChannelRepository.findByUserIdOrUser1Id(id).forEach(messaging_chanel -> {
 
-
-        messagingChannelRepository.findByUserIdOrUser1Id(id).forEach(channel -> {
-            List<MessageData> messages = messagingDataRepository.findByChannel_Id(channel.getChannel_id());
-            Messaging_chanelDTO dto = MessagingChannelAdapter.toDTO(channel, messages); // adapter appliqué
-            res.add(dto);
+             List<MessageData> messageData= messagingDataRepository.findByChannel_Id(messaging_chanel.getChannel_id());
+             Employee user = messaging_chanel.getUser().getEmployee_id()!=id?messaging_chanel.getUser():messaging_chanel.getUser1();
+            res.add(new Messaging_chanelDTO(messaging_chanel.getChannel_id(),user,MessageData.toDTOList(messageData),messaging_chanel.getUnreadMessageCount()));
         });
 
         return res;
