@@ -42,13 +42,4 @@ public class FoodsOrders {
         this.ready = true;
     }
     
-    // Méthode pour vérifier si la commande appartient à un employé spécifique
-    public boolean belongsToEmployee(int employeeId) {
-        return this.employee != null && this.employee.getId() == employeeId;
-    }
-    
-    // Méthode pour vérifier si la commande est en attente (non prête)
-    public boolean isPending() {
-        return !this.ready;
-    }
-}
+   
