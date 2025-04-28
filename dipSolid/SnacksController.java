@@ -13,10 +13,10 @@ import java.util.List;
 @RequestMapping("/snacks")
 @RestController
 public class SnacksController {
-    private SnacksService snacksService;
+    private ISnacksService snacksService;
 
     @Autowired
-    public SnacksController(SnacksService snacksService) {
+    public SnacksController(ISnacksService snacksService) {
         this.snacksService = snacksService;
     }
 
